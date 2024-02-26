@@ -27,39 +27,30 @@ class App extends React.Component {
       case "sticks":
         var curr = document.getElementById("q");
         curr.play();
-        break;
       case "crash":
         var curr = document.getElementById("w");
         curr.play();
-        break;
       case "crash2":
         var curr = document.getElementById("e");
         curr.play();
-        break;
       case "hihatopen":
         var curr = document.getElementById("a");
         curr.play();
-        break;
       case "hihatclosed":
         var curr = document.getElementById("s");
         curr.play();
-        break;
       case "ride":
         var curr = document.getElementById("d");
         curr.play();
-        break;
       case "snare":
         var curr = document.getElementById("z");
         curr.play();
-        break;
       case "kick":
         var curr = document.getElementById("x");
         curr.play();
-        break;
       case "tom":
         var curr = document.getElementById("c");
         curr.play();
-        break;
     }
     
     
