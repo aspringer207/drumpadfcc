@@ -23,68 +23,59 @@ const myClips = [
   tom2,
 ];
 const clipObj = [
-  {
-    mySticks: {
+  
+    {
       name: 'sticks',
       src: sticks,
       key: ['Q', 'q'],
     },
-  },
-  {
-    myRide: {
+
+    {
       name: 'ride',
       src: ride,
       key: ['W', 'w'],
     },
-  },
-  {
-    myCrash: {
+
+    {
       name: 'crash',
       src: crash,
       key: ['E', 'e'],
     },
-  },
-  {
-    myCrash2: {
+
+    {
       name: 'crash2',
       src: crash2,
       key: ['A', 'a'],
     },
-  },
-  {
-    myHiHatClosed: {
+
+    {
       name: 'hihatclosed',
       src: hihatclosed,
       key: ['S', 's'],
     },
-  },
-  {
-    myHiHatOpen: {
+
+    {
       name: 'hihatopen',
       src: hihatopen,
       key: ['D', 'd'],
     },
-  },
-  {
-    myKick: {
+
+    {
       name: 'kick',
       src: kick,
       key: ['Z', 'z'],
     },
-  },
-  {
-    myTom: {
+
+    {
       name: 'tom',
       src: tom,
       key: ['X', 'x'],
     },
-  },
-  {
-    myTom2: {
+
+    {
       name: 'tom2',
       src: tom2,
       key: ['C', 'c'],
-    },
-  },
+    }
 ];
 export default clipObj;
