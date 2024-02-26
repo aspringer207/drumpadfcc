@@ -1,0 +1,79 @@
+@import './index.scss';
+
+$lemon: #dbdb7d;
+$papaya: #db9a7d;
+$berry: #7ddbd0;
+$grape: #ab7ddb;
+$melon: #b1e3a3;
+$light-gray: #c0c0c0;
+$dark-gray: #454d4c;
+
+#wrapper {
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  border: 2px solid $light;
+  justify-content: space-around;
+  .box {
+    margin: 25px;
+  }
+
+  .mr {
+    display: flex;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+    button {
+      width: calc(100% / 3);
+      border-radius: 10px;
+    }
+  }
+  .btn-box {
+    .mr:nth-of-type(1) {
+      button:nth-of-type(n) {
+        background-color: $berry;
+      }
+      button:nth-of-type(2n) {
+        background-color: $papaya;
+      }
+      button:nth-of-type(3n) {
+        background-color: $grape;
+      }
+    }
+    .mr:nth-of-type(2) {
+      button:nth-of-type(n) {
+        background-color: $melon;
+      }
+      button:nth-of-type(2n) {
+        background-color: $berry;
+      }
+      button:nth-of-type(3n) {
+        background-color: $lemon;
+      }
+    }
+  }
+  .mr:nth-of-type(2) {
+    button:nth-of-type(n) {
+      background-color: $melon;
+    }
+    button:nth-of-type(2n) {
+      background-color: $berry;
+    }
+    button:nth-of-type(3n) {
+      background-color: $lemon;
+    }
+  }
+
+  .mr:nth-of-type(3) {
+    button:nth-of-type(n) {
+      background-color: $melon;
+    }
+    button:nth-of-type(2n) {
+      background-color: $berry;
+    }
+    button:nth-of-type(3n) {
+      background-color: $lemon;
+    }
+  }
+}

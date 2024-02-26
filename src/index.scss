@@ -1,0 +1,30 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+//variable overrides
+$lemon: #DBDB7D;
+$papaya: #DB9A7D;
+$berry: #7DDBD0;
+$grape: #AB7DDB;
+$melon: #b1e3a3;
+$light-gray: #C0C0C0;
+$dark-gray: #454D4C;
+
+$theme-colors:(
+  danger: $papaya,
+  warning: $lemon,
+  primary: $berry,
+  info: $grape,
+  success: $melon,
+  light: $light-gray,
+  dark: $dark-gray);
+
+@import "bootstrap";
+
+
+
+
+
+
+
+//custom
