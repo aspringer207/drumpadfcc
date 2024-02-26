@@ -1,3 +1,13 @@
+import sticks from './sound/sticks.mp3';
+import ride from './sound/ride.mp3';
+import crash from './sound/crash.mp3';
+import crash2 from './sound/crash2.mp3';
+import snare from './sound/snare.mp3';
+import hihatclosed from './sound/hihatclosed.mp3';
+import hihatopen from './sound/hihatopen.mp3';
+import kick from './sound/kick.mp3';
+import tom from './sound/tom.mp3';
+import tom2 from './sound/tom2.mp3';
 
 
 const myClips = [
@@ -5,13 +15,14 @@ const myClips = [
   ride,
   crash,
   crash2,
+  snare,
   hihatclosed,
   hihatopen,
   kick,
-  midtom,
-  hitom,
+  tom,
+  tom2,
 ];
-const myClipObject = [
+const clipObj = [
   {
     mySticks: {
       name: 'sticks',
@@ -62,24 +73,18 @@ const myClipObject = [
     },
   },
   {
-    myMidTom: {
-      name: 'midtom',
-      src: midtom,
+    myTom: {
+      name: 'tom',
+      src: tom,
       key: ['X', 'x'],
     },
   },
   {
-    myHiTom: {
-      name: 'hitom',
-      src: hitom,
+    myTom2: {
+      name: 'tom2',
+      src: tom2,
       key: ['C', 'c'],
     },
   },
 ];
-
-function SourceList() {
-  return <ul>{
-    myClips
-    .map((x) => `<media src=${x.src}></media>`)}</ul>;
-}
-export default SourceList;
+export default clipObj;
