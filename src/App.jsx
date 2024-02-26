@@ -24,8 +24,9 @@ class App extends React.Component {
   }
   handleClick(event){
     const btn = event.target.id;
-    const test = this.state.clips.filter((x)=> this.state.clips.key.includes(x))
-    console.log(test)
+    console.log(event.target)
+    
+    
   }
   
 
@@ -41,24 +42,35 @@ class App extends React.Component {
         </div>
         <div className="box btn-box">
           <div className="mr">
-            <button onClick={('click', ()=> this.handleClick)}>Q</button>
-            <button variant="danger">W</button>
-            <button variant="success">E</button>
+            <button id="q" type="button" onClick={this.handleClick}>Q</button>
+            <button id="w" type="button" variant="danger">W</button>
+            <button id="e" type="button" variant="success">E</button>
           </div>
 
           <div className="mr">
-            <button variant="info">A</button>
-            <button>S</button>
-            <button variant="warning">D</button>
+            <button id="a" type="button" variant="info">A</button>
+            <button id="s" type="button">S</button>
+            <button id="d" type="button" variant="warning">D</button>
           </div>
 
           <div className="mr">
-            <button variant="warning">Z</button>
-            <button variant="danger">X</button>
-            <button variant="info">C</button>
+            <button id="z" type="button" variant="warning">Z</button>
+            <button id="x" type="button" variant="danger">X</button>
+            <button id="c" type="button" variant="info">C</button>
           </div>
         </div>
-        <audio></audio>
+        <data>
+          <audio id="q" src="./src/sound/sticks.mp3"></audio>
+          <audio id="w" src="./src/sound/crash.mp3"></audio>
+          <audio id="e" src="./src/sound/crash2.mp3"></audio>
+          <audio id="a" src="./src/sound/hihatopen.mp3"></audio>
+          <audio id="s" src="./src/sound/hihatclosed.mp3"></audio>
+          <audio id="d" src="./src/sound/ride.mp3"></audio>
+          <audio id="z" src="./src/sound/snare.mp3"></audio>
+          <audio id="x" src="./src/sound/kick.mp3"></audio>
+          <audio id="c" src="./src/sound/tom.mp3"></audio>
+
+        </data>
 
       </div>
 
