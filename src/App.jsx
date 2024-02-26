@@ -7,12 +7,20 @@ import clipObj from './sounds';
 class App extends React.Component {
   constructor(props) {
     super()
+    this.state = {
+      clips: [],
+      volume: 0
+    }
   }
   clipList() {
+    const list = []
     const myClips = clipObj;
     for (const clip of clipObj) {
       const el = `<media src="${clip.src}" id="${clip.key[0]}"></media>`
+      list.push(clip)
     }
+    
+    this.setState({clips: [...list]})
   }
 
 
