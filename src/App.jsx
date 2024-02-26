@@ -1,16 +1,7 @@
 import './style.scss';
 import React from 'react';
-import { Form, Col } from 'react-bootstrap';
+import { Range } from './Range';
 
-
-function Range() {
-  return (
-    <Col>
-      <Form.Label>Range</Form.Label>
-      <Form.Range />
-    </Col>
-  );
-}
 
 function App() {
   return (
