@@ -82,14 +82,14 @@ class App extends React.Component {
         <div className="box btn-box">
           <div className="mr">
             <button id="sticks" type="button" onClick={this.handleClick}>Q</button>
-            <button id="crash" type="button" variant="danger">W</button>
-            <button id="crash2" type="button" variant="success">E</button>
+            <button id="crash" type="button" onClick={this.handleClick} variant="danger">W</button>
+            <button id="crash2" type="button" onClick={this.handleClick} variant="success">E</button>
           </div>
 
           <div className="mr">
-            <button id="hihatopen" type="button" variant="info">A</button>
-            <button id="hihatclosed" type="button">S</button>
-            <button id="ride" type="button" variant="warning">D</button>
+            <button id="hihatopen" onClick={this.handleClick} type="button" variant="info">A</button>
+            <button id="hihatclosed" onClick={this.handleClick} type="button">S</button>
+            <button id="ride" type="button" onClick={this.handleClick} variant="warning">D</button>
           </div>
 
           <div className="mr">
