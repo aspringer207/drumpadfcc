@@ -23,8 +23,10 @@ class App extends React.Component {
     this.handleClick = this.handleClick.bind(this)
   }
   handleClick(event){
-    const btn = event.target.id;
-    console.log(event.target)
+    switch(event.target.id){
+      case "q":
+        document.getElementById
+    }
     
     
   }
@@ -42,21 +44,21 @@ class App extends React.Component {
         </div>
         <div className="box btn-box">
           <div className="mr">
-            <button id="q" type="button" onClick={this.handleClick}>Q</button>
-            <button id="w" type="button" variant="danger">W</button>
-            <button id="e" type="button" variant="success">E</button>
+            <button id="sticks" type="button" onClick={this.handleClick}>Q</button>
+            <button id="crash" type="button" variant="danger">W</button>
+            <button id="crash2" type="button" variant="success">E</button>
           </div>
 
           <div className="mr">
-            <button id="a" type="button" variant="info">A</button>
-            <button id="s" type="button">S</button>
-            <button id="d" type="button" variant="warning">D</button>
+            <button id="hihatopen" type="button" variant="info">A</button>
+            <button id="hihatclosed" type="button">S</button>
+            <button id="ride" type="button" variant="warning">D</button>
           </div>
 
           <div className="mr">
-            <button id="z" type="button" variant="warning">Z</button>
-            <button id="x" type="button" variant="danger">X</button>
-            <button id="c" type="button" variant="info">C</button>
+            <button id="snare" type="button" variant="warning">Z</button>
+            <button id="kick" type="button" variant="danger">X</button>
+            <button id="tom" type="button" variant="info">C</button>
           </div>
         </div>
         <data>
