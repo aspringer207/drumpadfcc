@@ -17,39 +17,51 @@ class App extends React.Component {
   constructor(props) {
     super()
     this.state = {
+      current: null,
       clips: ()=>clipList(),
       volume: 0
     }
     this.handleClick = this.handleClick.bind(this)
   }
   handleClick(event){
+    event.preventDefault();
+    let curr;
     switch(event.target.id){
       case "sticks":
-        var curr = document.getElementById("q");
-        curr.play();
+        curr = document.getElementById("q");
+        this.setState({current: curr})
+        this.state.current.play();
       case "crash":
-        var curr = document.getElementById("w");
+        curr = document.getElementById("w");
+        this.setState({current: curr})
         curr.play();
       case "crash2":
-        var curr = document.getElementById("e");
+        curr = document.getElementById("e");
+        this.setState({current: curr})
         curr.play();
       case "hihatopen":
-        var curr = document.getElementById("a");
+        curr = document.getElementById("a");
+        this.setState({current: curr})
         curr.play();
       case "hihatclosed":
-        var curr = document.getElementById("s");
+        curr = document.getElementById("s");
+        this.setState({current: curr})
         curr.play();
       case "ride":
-        var curr = document.getElementById("d");
+        curr = document.getElementById("d");
+        this.setState({current: curr})
         curr.play();
       case "snare":
-        var curr = document.getElementById("z");
+        curr = document.getElementById("z");
+        this.setState({current: curr})
         curr.play();
       case "kick":
-        var curr = document.getElementById("x");
+        curr = document.getElementById("x");
+        this.setState({current: curr})
         curr.play();
       case "tom":
-        var curr = document.getElementById("c");
+        curr = document.getElementById("c");
+        this.setState({current: curr})
         curr.play();
     }
     
