@@ -13,14 +13,14 @@ import clipObj from './sounds';
     const [buttonKeys, setButtonKeys] = useState(()=> checkKeys);
 
     const [volume, setVolume] = useState(0.5);
-    handleChange = (event) => {
+    const handleChange = (event) => {
       event.preventDefault()
       setState({
         volume: event.target.value
       })
   
     }
-    handleClick = (event) => {
+    const handleClick = (event) => {
       const source = event.target.value;
       let med = document.getElementById(source);
       med.volume = state.volume;
