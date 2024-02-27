@@ -1,5 +1,7 @@
-export default function checkKeys() {
-    const keymap = [81, 87, 69, 65, 83, 68, 90, 88, 67];
+import { forwardRef } from "react";
+const keymap = [81, 87, 69, 65, 83, 68, 90, 88, 67];
+const ref = useRef(keymap);
+    return(
     document.addEventListener ("keydown", (event)=> (
         keymap.includes(event.code)
         ?
@@ -29,8 +31,11 @@ export default function checkKeys() {
         ) 
         : false
         )
-    )
+    ))
+const checkKeys = forwardRef(function checkKeys(event) {
+    
+    
 
 
     
-}
+})
