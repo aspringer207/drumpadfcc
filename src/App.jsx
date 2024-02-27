@@ -36,7 +36,7 @@ import clipObj from './sounds';
           <div className="mr">
             <div class="slider">
               <Form.Label className="display-5">Volume
-                <Form.Range id="volume" min="0" max="1" step=".05" onChange={handleChange} defaultValue={50} /></Form.Label>
+                <Form.Range id="volume" min="0" max="1" step=".05" onChange={(e)=>handleChange(e)} defaultValue={50} /></Form.Label>
             </div>
             <div id="clips" />
           </div>
