@@ -20,36 +20,35 @@ class App extends React.Component {
       current: null,
       clips: () => clipList(),
       volume: 0.50,
+      keymap: [
+        81,
+      87,
+      69,
+      65,
+      83,
+      68,
+      90,
+      88,
+      67]
       
 
     }
     this.handleClick = this.handleClick.bind(this);
-    this.handleChange = this.handleChange.bind(this)
+    this.handleChange = this.handleChange.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
   }
-  ComponentDidMount(state) {
-    const keymap = {
-      "q": 81,
-      "w": 87,
-      "e": 69,
-      "a": 65,
-      "s": 83,
-      "d": 68,
-      "z": 90,
-      "x": 88,
-      "c": 67,
-    }
-    const kk = Object.keys(keymap)
-    const kv = Object.values(keymap)
-    window.addEventListener('keydown', function (event) {
-      if (kk.includes(event.key)) {
-        event.preventDefault();
-        const keystring = String(event.key)
-        let current = document.getElementById(keystring);
-        current.play()
-      }
-      else return
-    }
+  ComponentDidMount() {
+    window.addEventListener('keydown', this.handleKeyDown
     )
+  }
+  handleKeyDown = (event) => {
+    event.preventDefault();
+    if (this.state.keymap.includes(event.keyCode)){
+      let med = document.getElementById(string.fromCharCode(event.keyCode))
+          med.volume = this.state.volume;
+          med.play();
+    }
+    
   }
   handleChange(event) {
     event.preventDefault()
@@ -60,7 +59,7 @@ class App extends React.Component {
   }
   handleClick(event) {
     const source = event.target.value;
-    const med = document.getElementById(source);
+    let med = document.getElementById(source);
     med.volume = this.state.volume;
     med.play();
   }
