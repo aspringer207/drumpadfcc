@@ -47,10 +47,8 @@ export default function App() {
 
 
 
-  function ComponentDidMount() {
-    window.addEventListener('keydown', handleKeyDown
-    )
-  }
+
+
     return (
       <div id="wrapper" className="App">
         <div className="box">
@@ -95,5 +93,7 @@ export default function App() {
       </div>
 
     );
+
+    
 
     };
