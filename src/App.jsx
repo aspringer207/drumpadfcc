@@ -13,15 +13,6 @@ import clipObj from './sounds';
     const [buttonKeys, setButtonKeys] = useState(()=> checkKeys);
 
     const [volume, setVolume] = useState(0.5);
-    handleKeyDown = (event) => {
-      event.preventDefault();
-      if (state.keymap.includes(event.keyCode)){
-        let med = document.getElementById(string.fromCharCode(event.keyCode))
-            med.volume = state.volume;
-            med.play();
-      }
-      
-    }
     handleChange = (event) => {
       event.preventDefault()
       setState({
