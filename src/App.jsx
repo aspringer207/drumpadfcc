@@ -2,14 +2,17 @@ import './style.scss';
 import React from 'react';
 import {useState} from 'react';
 import { Form, Card } from 'react-bootstrap'
+import checkKeys from './keymap';
 import clipObj from './sounds';
 
   
 
 
   export default function App() {
+
+    const [buttonKeys, setButtonKeys] = useState(()=> checkKeys);
+
     const [volume, setVolume] = useState(0.5);
-    const [keymap, setKeyMap] = useState([81, 87, 69, 65, 83, 68, 90, 88, 67])
     handleKeyDown = (event) => {
       event.preventDefault();
       if (state.keymap.includes(event.keyCode)){
@@ -31,7 +34,8 @@ import clipObj from './sounds';
       let med = document.getElementById(source);
       med.volume = state.volume;
       med.play();
-    }
+    };
+
     
 
 
