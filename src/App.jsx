@@ -4,49 +4,35 @@ import {useState} from 'react';
 import { Form, Card } from 'react-bootstrap'
 import clipObj from './sounds';
 
-function clipList() {
-  const list = []
-  const myClips = clipObj;
-  for (const clip of clipObj) {
-    const el = `<media src="${clip.src}" id="${clip.key[0]}"></media>`
-    list.push(clip)
-  }
-
-  return list
-}
-export default function App() {
-  const [current, setCurrent] = useState(null);
-  const [volume, setVolume] = useState(0.5);
-  const [keymap, setKeyMap] = useState([81, 87, 69, 65, 83, 68, 90, 88, 67])
   
 
-  
 
-  handleKeyDown = (event) => {
-    event.preventDefault();
-    if (state.keymap.includes(event.keyCode)){
-      let med = document.getElementById(string.fromCharCode(event.keyCode))
-          med.volume = state.volume;
-          med.play();
+  export default function App() {
+    const [volume, setVolume] = useState(0.5);
+    const [keymap, setKeyMap] = useState([81, 87, 69, 65, 83, 68, 90, 88, 67])
+    handleKeyDown = (event) => {
+      event.preventDefault();
+      if (state.keymap.includes(event.keyCode)){
+        let med = document.getElementById(string.fromCharCode(event.keyCode))
+            med.volume = state.volume;
+            med.play();
+      }
+      
+    }
+    handleChange = (event) => {
+      event.preventDefault()
+      setState({
+        volume: event.target.value
+      })
+  
+    }
+    handleClick = (event) => {
+      const source = event.target.value;
+      let med = document.getElementById(source);
+      med.volume = state.volume;
+      med.play();
     }
     
-  }
-  handleChange = (event) => {
-    event.preventDefault()
-    setState({
-      volume: event.target.value
-    })
-
-  }
-  handleClick = (event) => {
-    const source = event.target.value;
-    let med = document.getElementById(source);
-    med.volume = state.volume;
-    med.play();
-  }
-
-
-
 
 
     return (
