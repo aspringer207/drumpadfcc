@@ -20,33 +20,36 @@ class App extends React.Component {
       current: null,
       clips: () => clipList(),
       volume: 0.50,
-      keymap: 
-        {"q": 81,
-        "w": 87,
-        "e": 69, 
-        "a":65, 
-        "s":83, 
-        "d":68, 
-        "z":90, 
-        "x":88,
-        "c":67, }
-    
+      
+
     }
     this.handleClick = this.handleClick.bind(this);
     this.handleChange = this.handleChange.bind(this)
   }
-  ComponentDidMount(state){
-    const keym = this.state.keymap;
-    window.addEventListener('keypress', function(event){
-      if (keym.includes(event.key)){
+  ComponentDidMount(state) {
+    const keymap = {
+      "q": 81,
+      "w": 87,
+      "e": 69,
+      "a": 65,
+      "s": 83,
+      "d": 68,
+      "z": 90,
+      "x": 88,
+      "c": 67,
+    }
+    const kk = Object.keys(keymap)
+    const kv = Object.values(keymap)
+    window.addEventListener('keydown', function (event) {
+      if (kk.includes(event.key)) {
         event.preventDefault();
         const keystring = String(event.key)
         let current = document.getElementById(keystring);
-        current.src.play()
+        current.play()
       }
       else return
     }
-      )
+    )
   }
   handleChange(event) {
     event.preventDefault()
@@ -95,15 +98,15 @@ class App extends React.Component {
             <button id="tom" value="c" type="button" onClick={this.handleClick} variant="info">C</button>
           </div>
         </div>
-          <audio id="q" volume={this.state.volume} src="./src/sound/sticks.mp3"></audio>
-          <audio id="w" volume={this.state.volume} src="./src/sound/crash.mp3"></audio>
-          <audio id="e" volume={this.state.volume} src="./src/sound/crash2.mp3"></audio>
-          <audio id="a" volume={this.state.volume} src="./src/sound/hihatopen.mp3"></audio>
-          <audio id="s" volume={this.state.volume} src="./src/sound/hihatclosed.mp3"></audio>
-          <audio id="d" volume={this.state.volume} src="./src/sound/ride.mp3"></audio>
-          <audio id="z" volume={this.state.volume} src="./src/sound/snare.mp3"></audio>
-          <audio id="x" volume={this.state.volume} src="./src/sound/kick.mp3"></audio>
-          <audio id="c" volume={this.state.volume} src="./src/sound/tom.mp3"></audio>
+        <audio id="q" volume={this.state.volume} src="./src/sound/sticks.mp3"></audio>
+        <audio id="w" volume={this.state.volume} src="./src/sound/crash.mp3"></audio>
+        <audio id="e" volume={this.state.volume} src="./src/sound/crash2.mp3"></audio>
+        <audio id="a" volume={this.state.volume} src="./src/sound/hihatopen.mp3"></audio>
+        <audio id="s" volume={this.state.volume} src="./src/sound/hihatclosed.mp3"></audio>
+        <audio id="d" volume={this.state.volume} src="./src/sound/ride.mp3"></audio>
+        <audio id="z" volume={this.state.volume} src="./src/sound/snare.mp3"></audio>
+        <audio id="x" volume={this.state.volume} src="./src/sound/kick.mp3"></audio>
+        <audio id="c" volume={this.state.volume} src="./src/sound/tom.mp3"></audio>
 
 
       </div>
